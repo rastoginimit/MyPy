@@ -14,7 +14,7 @@ sun directories, recursively
 '''
 def listFilesRecursive(path):
     files = []
-    for (dirpath, filenames) in os.walk(path):
+    for (dirpath, dirnames, filenames) in os.walk(path):
         for filename in filenames: 
             files.append(os.path.join(dirpath,filename))
     return files
